@@ -16,7 +16,7 @@ func Test_Init(t *testing.T) {
 	response := simpleCC.Init(mockStub)
 	mockStub.MockTransactionEnd(txId)
 	if s := response.GetStatus(); s != 200 {
-		fmt.Println("Init failed")
+		fmt.Println("Init test failed")
 		t.FailNow()
 	}
 }
@@ -35,7 +35,7 @@ func Test_initMarble(t *testing.T) {
 	fmt.Println("Message: " + response.GetMessage())
 
 	if s := response.GetStatus(); s != 200 {
-		fmt.Println("Init failed")
+		fmt.Println("initMarble test failed")
 		t.FailNow()
 	}
 }
@@ -54,7 +54,7 @@ func Test_initMarble_incorrectArgs(t *testing.T) {
 	fmt.Println("Message: " + response.GetMessage())
 
 	if s := response.GetStatus(); s != 500 {
-		fmt.Println("Init failed")
+		fmt.Println("initMarble test failed")
 		t.FailNow()
 	}
 }
